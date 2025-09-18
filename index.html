@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sridhar's Portfolio</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+    }
+    header {
+        background: #333;
+        color: #fff;
+        padding: 15px;
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        background: #444;
+    }
+    nav button {
+        background: #444;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    nav button:hover {
+        background: #666;
+    }
+    #content {
+        max-width: 900px;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+        color: #333;
+    }
+    .project {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #f9f9f9;
+        border-left: 4px solid #333;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Sridhar's Portfolio</h1>
+</header>
+
+<nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('about')">About</button>
+    <button onclick="showSection('biodata')">Biodata</button>
+    <button onclick="showSection('projects')">Projects</button>
+    <button onclick="showSection('contact')">Contact</button>
+</nav>
+
+<div id="content"></div>
+
+<script>
+    function showSection(section) {
+        let content = document.getElementById('content');
+        if (section === 'home') {
+            content.innerHTML = `
+                <section class="hero" style="text-align:center; padding:30px;">
+                    <h2>Hello, I'm Sridhar</h2>
+                    <p>
+                        I’m a college student pursuing <strong>B.Sc. Information Technology</strong>.  
+                        I am passionate about web development, problem-solving, and learning new technologies.  
+                        This portfolio showcases my education, projects, and skills as I begin my journey in IT.  
+                    </p>
+                </section>
+            `;
+        } else if (section === 'about') {
+            content.innerHTML = `
+                <h2>About Me</h2>
+                <p>Hi, I’m Sridhar, an undergraduate IT student who enjoys coding and building creative web solutions.  
+                I am eager to apply my knowledge in real-world projects and internships while improving my skills in programming and design.</p>
+                <h2>🎓 Education</h2>
+                <p>B.Sc. Information Technology – TERFS College of Arts and Science (Bharathiar University)</p>
+                <h2>💡 Interests</h2>
+                <p>Web Development<br>UI/UX Design<br>Problem Solving<br>Learning New Technologies</p>
+                <h2>🛠 Skills</h2>
+                <p>HTML, CSS, JavaScript (Basics)<br>Git & GitHub<br>Responsive Web Design</p>
+            `;
+        } else if (section === 'projects') {
+            content.innerHTML = `
+        <h2>My Projects</h2>
+        <a href="index.html" target="_blank">
+            <div class="project"><strong>Portfolio Website</strong> – This website showcasing my skills and journey.</div>
+        </a>
+        <a href="todo.html" target="_blank">
+            <div class="project"><strong>To-Do App</strong> – A simple web app to manage daily tasks.</div>
+        </a>
+        <a href="calculator.html" target="_blank">
+            <div class="project"><strong>Basic Calculator</strong> – A JavaScript-based calculator for simple math operations.</div>
+        </a>
+    `;
+}
+
+        else if (section === 'biodata') {
+            content.innerHTML = `
+                <h1>Student Bio-data</h1>
+                <div class="section">
+                    <h2>Personal Details</h2>
+                    <p><strong>Name:</strong> Sridhar V L</p>
+                    <p><strong>DOB:</strong> 06/10/2006</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>Nationality:</strong> Indian</p>
+                    <p><strong>Email:</strong> vsridhar849@gmail.com</p>
+                    <p><strong>Phone:</strong> 9952762495</p>
+                </div>
+                <div class="section">
+                    <h2>Career Objective</h2>
+                    <p>To gain knowledge and hands-on experience in web development and software engineering,  
+                    while contributing positively to the IT industry as a beginner-level developer.</p>
+                </div>
+                <div class="section">
+                    <h2>Educational Qualification</h2>
+                    <ul>
+                        <li>B.Sc. Information Technology – Bharathiar University (Ongoing)</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Basic C & Java Programming</li>
+                        <li>UI/UX Fundamentals</li>
+                    </ul>
+                </div>
+                <div class="section">
+                    <h2>Hobbies</h2>
+                    <ul>
+                        <li>Coding and Learning New Tech</li>
+                        <li>Designing Simple UIs</li>
+                        <li>Playing Outdoor Games</li>
+                    </ul>
+                </div>
+            `;
+        }
+        else if (section === 'contact') {
+            content.innerHTML = `
+                <h2>Contact Me</h2>
+                <p><strong>Email:</strong> vsridhar849@gmail.com</p>
+                <p><strong>Phone:</strong> 9952762495</p>
+                <p><strong>Place:</strong> Tiruppur</p>
+            `;
+        }
+    }
+    
+    showSection('home');
+</script>
+
+</body>
+</html>
